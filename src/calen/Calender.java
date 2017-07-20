@@ -44,12 +44,14 @@ public class Calender {
 		// System.out.println("원하는 달을 입력하세요");
 		  Scanner scanner = new Scanner(System.in);
 		  Calender cal = new Calender();
-
+		  String PROMPT="cal>";
 		System.out.println("반복횟수를 입력하세요");
+
 
 		int repeat = scanner.nextInt();
 		for (int i = 0; i < repeat; i++) {
 			System.out.println("달을 입력하세요");
+			System.out.print(PROMPT);
 			int month = scanner.nextInt();
 			// int maxDayz [] ={31,28,31,30,31,30,31,31,30,31,30,31};
 			System.out.printf("%d월은 %d까지 있습니다\n", month, cal.getMaxDaysOfMonth(month));
