@@ -46,24 +46,30 @@ public class Calender {
 		  Calender cal = new Calender();
 		  String PROMPT="cal>";
 		System.out.println("반복횟수를 입력하세요");
-
-
-		int repeat = scanner.nextInt();
-		for (int i = 0; i < repeat; i++) {
+		int month = 1;
+	    while(true){
 			System.out.println("달을 입력하세요");
 			System.out.print(PROMPT);
-			int month = scanner.nextInt();
+		   month = scanner.nextInt();
+		   if(month== -1){
+			   break;
+		   }
+		   if (month >12){
+			   continue;
+		   }
 			// int maxDayz [] ={31,28,31,30,31,30,31,31,30,31,30,31};
 			System.out.printf("%d월은 %d까지 있습니다\n", month, cal.getMaxDaysOfMonth(month));
 			cal.printSampleCalendar();
+		
 		}
-		System.out.println("bye~~");
-		scanner.close();
+	
 		// int maxDayz [] ={31,28,31,30,31,30,31,31,30,31,30,31};
 		// System.out.printf("%d월은 %d까지 있습니다\n", month,
 		// cal.getMaxDaysOfMonth(month));
 		// cal.printSampleCalendar();
 
+		System.out.println("bye~");
+		scanner.close();
 		
-	}
-}
+	}}
+
